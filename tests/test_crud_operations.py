@@ -100,7 +100,7 @@ class CrudTestCase(unittest.TestCase):
         json.loads(response.data.decode('utf-8'))
         assert response.status_code == 404
 
-        # Delete a user that doesn't exist, expect 404 error
+        # Delete a group that doesn't exist, expect 404 error
         response = self.app.delete('/groups/unknown', follow_redirects=True)
         json.loads(response.data.decode('utf-8'))
         assert response.status_code == 404
